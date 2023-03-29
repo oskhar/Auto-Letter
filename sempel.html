@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<link href="https://moskhar.my.id/Surat-Cinta/surat.webp" rel="icon" type="image/x-icon">
+    <meta property="og:image" content="https://moskhar.my.id/Surat-Cinta/surat.webp">
+	<title>Surat Cintah Untuk Kamu</title>
+<style type="text/css">
+	#back{
+		height: 100vh;
+		width: 100vw;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: linear-gradient(to top left, #43C6AC, #191654);
+		font-family: sans-serif;
+		color: #d68e83;
+		overflow: hidden;
+	}
+	#back #isi{
+		height: 60vmin;
+		width: 55vw;
+		left: 0;
+		right: 0;
+		margin: auto;
+		position: absolute;
+		top: 15vh;
+		background: #f9faf5;
+		border: 70px solid #f9faf5;
+		border-radius: 30px;
+		font-size: 2.2vmax;
+	}
+	#back img{
+		position: relative;
+		margin: auto;
+		display: block;
+		height: 50%;
+	}
+	#content{
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		position: absolute;
+	}
+	#loading{
+		width: 100%;left: 0;height: 10px;
+		background: #2b627a;border-radius: 5px;
+		position: absolute;bottom: -12px;
+	}
+	#dalamLoading{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		border-radius: 5px;
+		background: #d68e83;
+	}
+	@KeyFrames loading{
+		0.1% {width: 100%;}
+		20%{width: 0%;}
+		20.1% {width: 100%;}
+		40%{width: 0%;}
+		40.1% {width: 100%;}
+		60%{width: 0%;}
+		60.1% {width: 100%;}
+		80%{width: 0%;}
+		80.1% {width: 100%;}
+		100%{width: 0%;}
+	}
+	@KeyFrames opt{
+		to{opacity: 0;}
+	}
+	@KeyFrames love{
+		to{top: 0;opacity: 0;}
+	}
+	h1{
+		color:deeppink;
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 50px;
+		width: 50px;
+		margin: auto;
+		top: 28.5vmin;
+		font-size: 0px;
+	}
+</style>
+</head>
+<body>
+	<div id="back">
+		<div id="isi"><div id="content"><p style="position: absolute;width: 100%;text-align: center;bottom: 4vmin;">Click Surat 👆</p></div><div id="loading"><div id="dalamLoading"></div></div></div>
+		<img id="surat" src="surat.webp" style="width: 40vmin;height: 40vmin;position: relative;margin: auto;top: 25vmin;border-radius: 20px;background-size: 200% 130%;background-position: center;" onclick="clc();">
+
+		<h1>♥</h1>
+		<h1 style="left: 50px">♥</h1>
+		<h1 style="left: 100px">♥</h1>
+		<h1 style="left: -50px">♥</h1>
+		<h1 style="left: -100px">♥</h1>
+		<h1 style="left: 50px;top:32vmin;">♥</h1>
+		<h1 style="left: 100px;top:32vmin;">♥</h1>
+		<h1 style="left: -50px;top:32vmin;">♥</h1>
+		<h1 style="left: -100px;top:32vmin;">♥</h1>
+		<h1 style="left: 150px;top:32vmin;">♥</h1>
+		<h1 style="left: -150px;top:32vmin;">♥</h1>
+	</div>
+</body>
+<script type="text/javascript">
+	
+var text = ["<p>Hai Cantik, aku mau ngasih tau sesuatu nih😊</p>","<p>Selama ini diem diem aku cinta sama kamu🤭</p>","<p>Mau coba bilang tapi hati berdebar dan akhirnya ga berani👉👈</p>","<p>Aku beneran tulus mau <del>memprogram</del> <i style='background: cyan;'>mendapatkan</i> hati kamu 🥰</p>","<p>Kamu mau ga jadi pacarku?</p>"];
+var sticker = ["gif1.webp","gif2.webp","gif5.webp","gif3.webp","gif4.webp"]
+var pin = 0;
+var mulai;
+function auto() {
+	document.getElementById('content').innerHTML = "<img src="+sticker[pin]+">";
+	document.getElementById('content').innerHTML = document.getElementById('content').innerHTML + text[pin];
+	// document.getElementById('dalamLoading').style.animation = 'loading 5s forwards';
+	
+	// setTimeout(() => {
+	// 	document.getElementById('dalamLoading').style.animation = 'none';
+	// }, 5000);
+	pin++;
+	if (pin == 5) {
+		clearInterval(mulai);
+		mulai = 0;
+		document.getElementById('loading').remove()
+	document.getElementById('content').innerHTML = document.getElementById('content').innerHTML + '<div style="font-size: 3.5vmax;font-weight:bold;position: absolute;bottom: -10px;width: 100%;left: 0;"><a href="https://api.whatsapp.com/send?phone=6281386380481&text=Kita+pacaran+sekarang!🫶😹😹" style="text-decoration: none;position: relative;display: inline;text-shadow: 3px 3px #d68e83, -3px -3px #d68e83;color: #f9faf5;text-align: center;">Mau</a><a href="https://api.whatsapp.com/send?phone=6281386380481&text=Kita+pacaran+sekarang!🫶😹😹" style="text-decoration: none;position: relative;display: inline;text-shadow: 3px 3px #d68e83, -3px -3px #d68e83;color: #f9faf5;text-align: center;left: 12%;">Mau banget</a></div>';
+	}
+}
+// https://api.whatsapp.com/send?phone=6281386380481
+function clc() {
+	var audio = new Audio('apa.mpga');
+	audio.play();
+	setTimeout(() => {
+		auto();
+		mulai = setInterval(auto,6000);
+		document.getElementById("dalamLoading").style.animation = "loading 30000ms linear forwards";
+	}, 800);
+	document.styleSheets[0].addRule('h1','animation: love 2000ms linear forwards;font-size: 50px;');
+	document.getElementById("surat").style.animation = "opt 200ms linear forwards";
+}
+	
+</script>
+</html>
