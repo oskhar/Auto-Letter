@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://moskhar.my.id/portfolio/pp.webp"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <meta
+      property="og:image"
+      content="https://moskhar.my.id/portfolio/pp.webp"
+    />
+    <meta
+      name="description"
+      content="
+        Cara membuat surat web untuk nembak atau keperluan masing masing tanpa harus bisa ngoding creator app: ProgarmmingTrick
+    "
+    />
+    <script src="main.js"></script>
+    <title>Mau bikin surat Web</title>
+    <style type="text/css">
+      body {
+        background: rgb(210, 210, 210);
+        color: #202020;
+      }
+      #header {
+        height: 80vh;
+        width: 60vw;
+        position: absolute;
+        left: 2vw;
+        top: 10vh;
+        background: #62a0ea;
+        border-radius: 5px;
+        box-shadow: -1vmin 1vmin 1vmin rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+      #con {
+        height: 50%;
+        width: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 25%;
+        background: transparent;
+        overflow: hidden;
+        color: #62a0ea;
+      }
+      #header #imgH {
+        position: absolute;
+        height: 15vmin;
+        width: 15vmin;
+        top: 2.5vmin;
+        left: 2.5vmin;
+        border-radius: 5px;
+        background: url("surat0.webp") center no-repeat;
+        background-size: cover;
+      }
+      #con div {
+        background-color: white;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        z-index: 1;
+      }
+      #con div #img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 5%;
+        height: 40%;
+        width: 12vw;
+        background: url("gif0.webp") center no-repeat;
+        background-size: auto 100%;
+      }
+      #con div p {
+        position: absolute;
+        top: 55%;
+        left: 5%;
+        width: 90%;
+        text-align: center;
+        font: 1.2vmax sans-serif;
+      }
+      section {
+        position: absolute;
+        right: 3vw;
+        top: 10vh;
+      }
+      button {
+        font: bold 1vmax sans-serif;
+        background: white;
+        position: relative;
+        display: inline;
+        padding: 1vmax;
+        border: none;
+        color: #202020;
+        border-radius: 5px;
+        margin-left: 1.5vmax;
+        box-shadow: -1vmin 1vmin 1vmin rgba(0, 0, 0, 0.2);
+      }
+      button div {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 0vh;
+        background: white;
+        z-index: -1;
+        border-radius: 50%;
+        box-shadow: -1vmin -1vmin 1vmin rgba(0, 0, 0, 0.2);
+      }
+      section .tombol1 {
+        box-shadow: none;
+      }
+      main {
+        width: 34vw;
+        height: 63vh;
+        border-bottom: 5vh solid white;
+        position: absolute;
+        bottom: 10vh;
+        right: 1vw;
+        border-radius: 5px;
+        background: white;
+        z-index: 3;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        box-shadow: -1vmin 1vmin 1vmin rgba(0, 0, 0, 0.2);
+      }
+      #m1,
+      #m2,
+      #m3,
+      #m4 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 5vmin;
+        opacity: 0;
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      #m1 {
+        animation: opt 1s linear forwards;
+        height: 83vmax;
+      }
+      main img {
+        position: relative;
+        display: inline-block;
+        margin-left: 2vmax;
+        margin-top: 2vmax;
+        width: 8vmax;
+        height: 8vmax;
+        background-size: cover;
+        border-radius: 3px;
+      }
+      #m2 * {
+        display: block;
+        position: relative;
+        margin-top: 1vh;
+        font: 1.2vmax sans-serif;
+        left: 5%;
+      }
+      textarea {
+        width: 90%;
+        height: 20%;
+      }
+      #sample {
+        position: relative;
+        display: inline-block;
+        width: 3vmax;
+        height: 3vmax;
+        margin-left: 1vmax;
+        margin-top: 1vmax;
+      }
+      @keyframes click {
+        to {
+          height: 15vh;
+          border-radius: 0%;
+        }
+      }
+      @keyframes opt {
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes kanan {
+        0% {
+          z-index: 5;
+          left: 100%;
+        }
+        100% {
+          left: 0%;
+        }
+      }
+      @keyframes kiri {
+        0% {
+          z-index: 5;
+          left: -100%;
+        }
+        100% {
+          left: 0%;
+        }
+      }
+      #button {
+        width: 16vmax;
+        height: 20%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0;
+        position: absolute;
+        background: transparent;
+      }
+      h1 {
+        font: bold 1.3vmax sans-serif;
+        color: #303030;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 1vw;
+        display: block;
+        line-height: 0vw;
+      }
+      h2 {
+        font: bold 1.3vmax sans-serif;
+        color: darkred;
+        position: absolute;
+        right: 0;
+        top: -1vmin;
+        padding: 1vw;
+        display: block;
+        line-height: 0vw;
+      }
+      #isiLagu label {
+        display: block;
+        font: bold 1vmax sans-serif;
+        color: white;
+      }
+      #lagu {
+        position: absolute;
+        right: 2.5vh;
+        top: 2.5vh;
+        height: 5vh;
+        width: 5vh;
+        text-align: center;
+        color: white;
+        font: bold 3vmax sans-serif;
+        z-index: 7;
+      }
+      @keyframes buka {
+        to {
+          height: 20%;
+        }
+      }
+      @media (max-width: 1200px) {
+        #header {
+          height: 40vh;
+          width: 94vw;
+          left: 3vw;
+          top: 3vh;
+        }
+        main {
+          width: 94vw;
+          height: 31vh;
+          bottom: 3vw;
+          left: 3vw;
+        }
+        section {
+          position: absolute;
+          left: 3vw;
+          right: auto;
+          top: 50vh;
+        }
+        #download {
+          position: absolute;
+          right: 3vw;
+          top: 50vh;
+        }
+        #m1 {
+          height: 65vmax;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="loader"
+      style="
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: #0090e7;
+        z-index: 111;
+      "
+    >
+      <style type="text/css">
+        #loader #pendd1 {
+          display: block;
+          position: absolute;
+          top: 20%;
+          left: 0;
+          right: 0;
+          margin: auto;
+          height: 100px;
+          width: 100px;
+          background: transparent;
+          border-radius: 50%;
+          animation: loader 3s infinite;
+          border: 5px solid #0090e7;
+          border-top: 5px solid white;
+          border-bottom: 5px solid white;
+        }
+        @keyframes loader {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+      <div id="pendd1"></div>
+      <p
+        style="
+          color: white;
+          display: block;
+          font-size: 24px;
+          font-family: sans-serif;
+          position: absolute;
+          top: 45%;
+          left: 0;
+          right: 0;
+          margin: auto;
+          text-align: center;
+        "
+      >
+        Loading
+      </p>
+      <script type="text/javascript">
+        window.addEventListener("load", function () {
+          document.getElementById("loader").innerHTML = "";
+          document.getElementById("loader").remove();
+        });
+      </script>
+    </div>
+    <div id="header">
+      <div id="imgH"></div>
+      <div id="con">
+        <div>
+          <div id="img"></div>
+          <p>
+            pada situs ini kamu bisa membuat surat online, surat ditembak dan
+            sebagainya
+          </p>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div id="m1">
+        <h1>Pilih Background</h1>
+        <span
+          id="sample"
+          style="
+            background: url('bg0.webp') center no-repeat;
+            background-size: cover;
+          "
+          onclick="this.style.animation='click .2s linear';document.getElementById('m2').style.animation='kanan .4s linear forwards';document.getElementById('m1').style.animation='opt .4s linear backwards';"
+        ></span>
+        <span
+          id="sample"
+          style="
+            background: url('bg1.webp') center no-repeat;
+            background-size: cover;
+          "
+          onclick="this.style.animation='click .2s linear';document.getElementById('m2').style.animation='kanan .4s linear forwards';document.getElementById('m1').style.animation='opt .4s linear backwards';"
+        ></span>
+        <span
+          id="sample"
+          style="
+            background: url('bg2.webp') center no-repeat;
+            background-size: cover;
+          "
+          onclick="this.style.animation='click .2s linear';document.getElementById('m2').style.animation='kanan .4s linear forwards';document.getElementById('m1').style.animation='opt .4s linear backwards';"
+        ></span>
+        <span
+          id="sample"
+          style="
+            background: url('bg3.webp') center no-repeat;
+            background-size: cover;
+          "
+          onclick="this.style.animation='click .2s linear';document.getElementById('m2').style.animation='kanan .4s linear forwards';document.getElementById('m1').style.animation='opt .4s linear backwards';"
+        ></span>
+      </div>
+      <div id="m2">
+        <h1>Buat Surat</h1>
+        <input type="text" placeholder="Masukkan Nama Kamu" />
+        <input type="text" placeholder="Masukkan Nama Pacar Kamu" />
+        <textarea placeholder="Tulis surat disini"></textarea>
+        <div id="button"><button class="tombol1">Buat Surat</button></div>
+      </div>
+    </main>
+    <section>
+      <button id="download">
+        Download Surat
+        <div></div>
+      </button>
+    </section>
+    <audio id="lagu" controls>
+      <source src="lagu.mp3" type="audio/mp3" />
+    </audio>
+    <div id="isiLagu">
+      <label>Ganti Lagu</label>
+      <input type="file" accept="audio/*" />
+    </div>
+    <script type="text/javascript">
+      document
+        .querySelector("#isiLagu input")
+        .addEventListener("change", function () {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            document.querySelector("#lagu source").src = e.target.result;
+            document.querySelector("#lagu").load();
+          };
+          reader.readAsDataURL(this.files[0]);
+        });
+    </script>
+  </body>
+</html>
